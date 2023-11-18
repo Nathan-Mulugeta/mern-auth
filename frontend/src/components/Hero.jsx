@@ -5,11 +5,12 @@ import { useLogoutMutation } from '../slices/usersApiSlice';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import { logout } from '../slices/authSlice';
+import { useEffect } from 'react';
 
 const Hero = () => {
-  const { userInfo } = useSelector((state) => state.auth);
-
   const dispatch = useDispatch();
+
+  const { userInfo } = useSelector((state) => state.auth);
 
   const navigate = useNavigate();
 
